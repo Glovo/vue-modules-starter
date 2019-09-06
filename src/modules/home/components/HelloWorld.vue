@@ -1,6 +1,15 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <h2>Counter {{ counter }}</h2>
+    <div class="counter-actions">
+      <button @click="increaseCounter">
+        Increase counter
+      </button>
+      <button @click="decreaseCounter">
+        Decrease counter
+      </button>
+    </div>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -122,10 +131,18 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
+import { namespace } from 'vuex-class'
+import { GET_COUNTER } from '../store/getters';
+import { INCREASE_COUNTER, DECREASE_COUNTER } from '../store/action-types';
+
+const home = namespace('home')
 
 @Component
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
+  @home.Getter(GET_COUNTER) counter!: number
+  @home.Action(INCREASE_COUNTER) increaseCounter!: () => void
+  @home.Action(DECREASE_COUNTER) decreaseCounter!: () => void
 }
 </script>
 
