@@ -1,5 +1,5 @@
-import { GetterTree } from 'vuex';
-import { HomeState } from './state';
+import { GetterTree } from 'vuex'
+import { HomeState } from './state'
 
 export const GET_COUNTER = 'GET_COUNTER'
 export const getters: GetterTree<any, HomeState> = {

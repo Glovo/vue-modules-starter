@@ -2,8 +2,8 @@ import { Vue as _Vue } from 'vue/types/vue'
 import { VueModule } from 'vue-modules'
 import VueRouter from 'vue-router'
 import { homeRoutes } from './router/home-routes'
-import { Store } from 'vuex';
-import { homeStore } from './store';
+import { Store } from 'vuex'
+import { homeStore } from './store'
 
 export class HomeModule implements VueModule {
   readonly name = 'home'

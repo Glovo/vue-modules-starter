@@ -1,5 +1,5 @@
-import { Module } from 'vuex';
-import { HomeState, initialState } from './state';
+import { Module } from 'vuex'
+import { HomeState, initialState } from './state'
 import { getters } from './getters'
 import { mutations } from './mutations'
 import { actions } from './actions'

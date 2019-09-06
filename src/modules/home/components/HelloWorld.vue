@@ -132,8 +132,8 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { namespace } from 'vuex-class'
-import { GET_COUNTER } from '../store/getters';
-import { INCREASE_COUNTER, DECREASE_COUNTER } from '../store/action-types';
+import { GET_COUNTER } from '../store/getters'
+import { INCREASE_COUNTER, DECREASE_COUNTER } from '../store/action-types'
 
 const home = namespace('home')
 
