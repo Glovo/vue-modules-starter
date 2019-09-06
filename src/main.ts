@@ -16,7 +16,7 @@ function bootstrap() {
   const coreModule = new CoreModule(routerModule.router!, storeModule.store!)
   coreModule.install(Vue)
 
-  const homeModule = new HomeModule(routerModule.router!)
+  const homeModule = new HomeModule(routerModule.router!, storeModule.store!)
   homeModule.install(Vue)
 
   const aboutModule = new AboutModule(routerModule.router!)

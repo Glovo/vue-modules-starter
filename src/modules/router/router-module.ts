@@ -6,6 +6,7 @@ import { Store } from 'vuex'
 import App from './components/App.vue'
 
 export class RouterModule implements VueModule {
+  readonly name = 'router'
   router?: Router;
   install(Vue: typeof _Vue) {
     Vue.use(Router)
