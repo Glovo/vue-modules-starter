@@ -12,10 +12,13 @@
         >
       </select>
     </div>
+    <h3>{{ name }}</h3>
   </div>
 </template>
 
 <script lang="ts">
+import { pluginsModule } from "@/modules/plugin";
+const { i18n } = pluginsModule;
 import Vue from "vue";
 import { LOCALES } from "@/modules/i18n/locales";
 export default Vue.extend({
@@ -25,6 +28,15 @@ export default Vue.extend({
       LOCALES,
       defaultLocale: this.$i18n.locale,
     };
+  },
+  computed: {
+    name() {
+      if (i18n) {
+        let r = i18n.t("This_is_an_about_page");
+        return r;
+      }
+      return "";
+    },
   },
 });
 </script>

@@ -7,13 +7,15 @@ import App from "./components/App.vue";
 
 export class CoreModule implements VueModule {
   readonly name = "core";
+  app?: _Vue;
   constructor(
     private router: VueRouter,
     private store: Store<any>,
     private i18n: I18n
   ) {}
   install(Vue: typeof _Vue) {
-    new Vue({
+    Vue.prototype.i18n = this.i18n;
+    this.app = new Vue({
       router: this.router,
       store: this.store,
       i18n: this.i18n,

@@ -1,9 +1,6 @@
 import { Vue as _Vue } from "vue/types/vue";
 import { VueModule } from "vue-modules";
 import I18n from "vue-i18n";
-import VueRouter from "vue-router";
-import { Store } from "vuex";
-import App from "./components/App.vue";
 import { Locales } from "./locales";
 
 let en = {};

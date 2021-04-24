@@ -5,6 +5,7 @@ import { I18nModule } from "@/modules/i18n";
 import { CoreModule } from "@/modules/core";
 import { HomeModule } from "@/modules/home";
 import { AboutModule } from "@/modules/about";
+import { pluginsModule } from "@/modules/plugin";
 
 function bootstrap() {
   Vue.config.productionTip = false;
@@ -23,6 +24,13 @@ function bootstrap() {
     i18nModule.i18n!
   );
   coreModule.install(Vue);
+
+  pluginsModule.install(
+    coreModule.app!,
+    routerModule.router!,
+    storeModule.store!,
+    i18nModule.i18n!
+  );
 
   const homeModule = new HomeModule(
     routerModule.router!,
