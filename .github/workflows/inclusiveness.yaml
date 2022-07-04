@@ -1,0 +1,9 @@
+name: inclusiveness-check
+on: [pull_request]
+jobs:
+  inclusiveness-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - id: inclusiveness-check
+        uses: Glovo/gha-inclusiveness-check/inclusiveness-check@v1.0.0
